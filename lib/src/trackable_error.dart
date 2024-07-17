@@ -1,6 +1,6 @@
+import 'package:trackable/src/generate_error_id.dart';
 import 'package:trackable/src/trackable_interfaces.dart';
 import 'package:trackable/src/tracking_id.dart';
-import 'package:uuid/uuid.dart';
 
 class TrackableError<T> implements ITrackableError {
   final T error;
@@ -23,7 +23,7 @@ class TrackableError<T> implements ITrackableError {
   }) =>
       TrackableError(
         error: error,
-        errorId: const Uuid().v4(),
+        errorId: generateErrorId(),
         trackingId: trackingId,
       );
 }

@@ -1,6 +1,6 @@
 import 'package:trackable/src/general_trackable_error.dart';
+import 'package:trackable/src/generate_error_id.dart';
 import 'package:trackable/src/tracking_id.dart';
-import 'package:trackable/src/tracking_id_service.dart';
 
 extension GeneralTrackableErrorExtensions on Object {
   GeneralTrackableError asGeneralTrackableError({
@@ -9,7 +9,7 @@ extension GeneralTrackableErrorExtensions on Object {
   }) =>
       GeneralTrackableError(
         error: this,
-        errorId: errorId ?? TrackingIdService.createTrackingId(),
+        errorId: errorId ?? generateErrorId(),
         trackingId: trackingId,
       );
 }

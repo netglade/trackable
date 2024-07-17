@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   meta: ^1.12.0
+  nanoid2: ^2.0.1
   uuid: ^4.4.2
 
 dev_dependencies:

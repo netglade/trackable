@@ -1,0 +1,35 @@
+include: package:netglade_analysis/lints.yaml
+
+linter:
+  rules:
+    no_literal_bool_comparisons: false
+
+# dcm check-dependencies . integration_test --ignored-packages=json_serializable,drift_dev,auto_mappr,flutter_launcher_icons,sqlcipher_flutter_libs
+dart_code_metrics:
+  extends:
+    - package:netglade_analysis/dcm.yaml
+  rules:
+    missing-test-assertion:
+      include-assertions:
+        - called
+        - calledOnce
+        - verifyNoMoreInteractions
+        - verifyZeroInteractions
+        - verifyZeroInteractionsWithAnalytics
+    prefer-named-boolean-parameters:
+      exclude:
+        - test/**
+    prefer-first:
+      exclude:
+        - test/**
+    # Check if we don't use position of values.
+    enum-constants-ordering: false
+    format-comment:
+      ignored-patterns:
+        - etc.
+
+    # Lints mainly widget callbacks, listeners etc.
+    avoid-passing-async-when-sync-expected: false
+    avoid-ignoring-return-values:
+      exclude:
+        - test/**

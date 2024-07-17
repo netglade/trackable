@@ -1,0 +1,1 @@
+typedef TrackingId = String;

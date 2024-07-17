@@ -1,0 +1,15 @@
+name: trackable
+description: Marker interfaces for trackable events and errors.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.4.3
+
+dependencies:
+  meta: ^1.12.0
+  uuid: ^4.4.2
+
+dev_dependencies:
+  netglade_analysis: ^11.0.0
+  test: ^1.24.0

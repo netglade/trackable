@@ -1,4 +1,4 @@
-import 'package:trackable/src/generate_error_id.dart';
+import 'package:trackable/src/error_id_service.dart';
 import 'package:trackable/src/trackable_error.dart';
 import 'package:trackable/src/tracking_id.dart';
 
@@ -15,7 +15,7 @@ class GeneralTrackableError extends TrackableError<Object> {
   }) =>
       GeneralTrackableError(
         error: error,
-        errorId: generateErrorId(),
+        errorId: ErrorIdService.get(),
         trackingId: trackingId,
       );
 }

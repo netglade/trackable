@@ -1,6 +1,6 @@
 name: trackable
 description: Marker interfaces for trackable events and errors.
-version: 1.0.1
+version: 1.1.0
 repository: https://github.com/netglade/trackable
 
 environment:

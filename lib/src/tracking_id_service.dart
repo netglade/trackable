@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:trackable/src/tracking_id.dart';
 import 'package:uuid/uuid.dart';
 
-class TrackingIdService {
+abstract final class TrackingIdService {
   static const _uuid = Uuid();
 
   static TrackingId? _trackingId;

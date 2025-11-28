@@ -26,4 +26,7 @@ class TrackableError<T> implements ITrackableError {
         errorId: ErrorIdService.get(),
         trackingId: trackingId,
       );
+
+  @override
+  String toString() => 'TrackableError(error: $error, errorId: $errorId, trackingId: $trackingId)';
 }

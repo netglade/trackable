@@ -20,5 +20,5 @@ class EmptyTrackableError implements ITrackableError {
       );
 
   @override
-  String toString() => 'Emptty error - ErrorId: $errorId, TrackingId: $trackingId';
+  String toString() => 'Empty error - ErrorId: $errorId, TrackingId: $trackingId';
 }

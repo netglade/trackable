@@ -3,6 +3,7 @@
 /// More dartdocs go here.
 library;
 
+export 'src/empty_trackable_error.dart';
 export 'src/error_id_service.dart';
 export 'src/general_trackable_error.dart';
 export 'src/general_trackable_error_extensions.dart';

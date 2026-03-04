@@ -16,6 +16,6 @@ abstract final class TrackingIdService {
 
   /// Creates a unique `trackingId`.
   static TrackingId createTrackingId() {
-    return _trackingId ?? _uuid.v4();
+    return _trackingId ?? _uuid.v4().replaceAll('-', '');
   }
 }

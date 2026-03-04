@@ -1,5 +1,6 @@
 // ignore_for_file: prefer-single-declaration-per-file, prefer-match-file-name
 
+import 'package:meta/meta.dart';
 import 'package:trackable/src/tracking_id.dart';
 
 interface class ITrackable {
@@ -15,4 +16,9 @@ interface class ITrackableError implements ITrackable {
   final String errorId;
 
   const ITrackableError({required this.trackingId, required this.errorId});
+
+  @override
+  @mustBeOverridden
+  // ignore: avoid-unnecessary-overrides, added @mustBeOverridden
+  String toString();
 }
